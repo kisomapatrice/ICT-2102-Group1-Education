@@ -1,47 +1,36 @@
 Document.addEventListener(‘DOMContentLoaded’, () => {
 
-    // 1. Mobile Menu Toggle
-    Const hamburger = document.getElementById(‘hamburger’);
+    // 1. Mobile Navigation Toggle
+    Const navToggle = document.getElementById(‘navToggle’);
     Const navLinks = document.getElementById(‘navLinks’);
 
-    If (hamburger && navLinks) {
-        Hamburger.addEventListener(‘click’, () => {
-            navLinks.classList.toggle(‘show’);
+    If (navToggle && navLinks) {
+        navToggle.addEventListener(‘click’, () => {
+            navLinks.classList.toggle(‘active’);
+        });
+
+        // Close mobile menu when clicking a link
+        navLinks.querySelectorAll(‘a’).forEach(link => {
+            link.addEventListener(‘click’, () => {
+                navLinks.classList.remove(‘active’);
+            });
         });
     }
 
-    // 2. Interactive FAQ Accordion
-    Const faqItems = document.querySelectorAll(‘.faq-item’);
-
-    faqItems.forEach(item => {
-        const question = item.querySelector(‘.faq-question’);
-        question.addEventListener(‘click’, () => {
-            // Close other items
-            faqItems.forEach(otherItem => {
-                if (otherItem !== item) {
-                    otherItem.classList.remove(‘active’);
-                }
-            });
-            // Toggle active on clicked item
-            Item.classList.toggle(‘active’);
-        });
-    });
-
-    // 3. Live Module Search Filter
-    Const searchInput = document.getElementById(‘moduleSearch’);
+    // 2. Module Live Search Filter
+    Const moduleSearch = document.getElementById(‘moduleSearch’);
     Const moduleCards = document.querySelectorAll(‘.module-card’);
 
-    If (searchInput) {
-        searchInput.addEventListener(‘input’, (e) => {
+    If (moduleSearch) {
+        moduleSearch.addEventListener(‘keyup’, (e) => {
             const query = e.target.value.toLowerCase().trim();
 
             moduleCards.forEach(card => {
                 const title = card.querySelector(‘h3’).textContent.toLowerCase();
-                const description = card.querySelector(‘p’).textContent.toLowerCase();
-                const category = card.querySelector(‘.category-tag’).textContent.toLowerCase();
+                const desc = card.querySelector(‘p’).textContent.toLowerCase();
 
-                if (title.includes(query) || description.includes(query) || category.includes(query)) {
-                    card.style.display = ‘flex’;
+                if (title.includes(query) || desc.includes(query)) {
+                    card.style.display = ‘block’;
                 } else {
                     Card.style.display = ‘none’;
                 }
@@ -49,26 +38,27 @@ Document.addEventListener(‘DOMContentLoaded’, () => {
         });
     }
 
-    // 4. Contact Form Validation & Submission
+    // 3. Contact Form Submission
     Const contactForm = document.getElementById(‘contactForm’);
-    Const formStatus = document.getElementById(‘formStatus’);
+    Const formSuccess = document.getElementById(‘formSuccess’);
 
-    If (contactForm) {
+    If (contactForm && formSuccess) {
         contactForm.addEventListener(‘submit’, (e) => {
             e.preventDefault();
-            
-            const name = document.getElementById(‘name’).value;
-            
-            formStatus.style.color = ‘#16a34a’;
-            formStatus.textContent = `Thank you, ${name}! Your message has been sent successfully to Group 1.`;
+
+            const nameInput = document.getElementById(‘name’).value;
+
+            formSuccess.style.display = ‘block’;
+            formSuccess.textContent = `Thank you, ${nameInput}! Your message has been submitted to Group 1.`;
 
             contactForm.reset();
 
             setTimeout(() => {
-                formStatus.textContent = ‘’;
+                formSuccess.style.display = ‘none’;
             }, 5000);
         });
     }
 });
+
 
 

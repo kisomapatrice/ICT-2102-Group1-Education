@@ -3,244 +3,162 @@
 <head>
     <meta charset=”UTF-8”>
     <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
-    <title>ICT-2102 | Group 1 Educational Hub</title>
-    
-    <!—Google Fonts & Font Awesome Icons 
-    <link rel=”preconnect” href=https://fonts.googleapis.com>
-    <link rel=”preconnect” href=https://fonts.gstatic.com crossorigin>
-    <link href=https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap rel=”stylesheet”>
-    <link rel=”stylesheet” href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css>
-    
-    <!—Custom CSS 
+    <title>ICT 2102 – Group 1 Educational Hub</title>
     <link rel=”stylesheet” href=”style.css”>
 </head>
 <body>
 
-    <!—Header & Navigation 
+    <!—Navigation Header 
     <header class=”navbar”>
         <div class=”container nav-container”>
-            <a href=”#” class=”logo”>
-                <i class=”fa-solid fa-graduation-cap”></i> EduGroup<span>1</span>
-            </a>
+            <a href=”#home” class=”logo”>ICT 2102 <span>Group 1</span></a>
+            <button class=”nav-toggle” id=”navToggle” aria-label=”Toggle navigation”>
+                ☰
+            </button>
             <nav class=”nav-links” id=”navLinks”>
-                <a href=”#home” class=”active”>Home</a>
+                <a href=”#home”>Home</a>
                 <a href=”#about”>About</a>
                 <a href=”#modules”>Modules</a>
                 <a href=”#team”>Team</a>
-                <a href=”#faq”>FAQ</a>
-                <a href=”#contact” class=”btn btn-primary”>Get in Touch</a>
+                <a href=”#contact” class=”btn-nav”>Contact Us</a>
             </nav>
-            <div class=”hamburger” id=”hamburger”>
-                <i class=”fa-solid fa-bars”></i>
-            </div>
         </div>
     </header>
 
     <!—Hero Section 
     <section id=”home” class=”hero”>
         <div class=”container hero-content”>
-            <span class=”badge”>ICT 2102 – Educational Technology</span>
-            <h1>Empowering Future Generations Through Digital Education</h1>
-            <p>Welcome to Group 1’s collaborative educational platform. We combine technology, innovative pedagogical frameworks, and modern web tools to foster accessible learning experiences.</p>
-            <div class=”hero-btns”>
-                <a href=”#modules” class=”btn btn-primary”>Explore Learning Modules</a>
-                <a href=”#about” class=”btn btn-secondary”>Learn More</a>
-            </div>
-        </div>
-    </section>
-
-    <!—Key Metrics / Stats Section 
-    <section class=”stats”>
-        <div class=”container stats-grid”>
-            <div class=”stat-card”>
-                <h3>4+</h3>
-                <p>Core Modules</p>
-            </div>
-            <div class=”stat-card”>
-                <h3>100%</h3>
-                <p>Digital Integration</p>
-            </div>
-            <div class=”stat-card”>
-                <h3>24/7</h3>
-                <p>Resource Access</p>
-            </div>
-            <div class=”stat-card”>
-                <h3>Group 1</h3>
-                <p>ICT Project Team</p>
+            <span class=”badge”>Course Assignment • ICT 2102</span>
+            <h1>Modern Digital Learning Platform</h1>
+            <p>A collaborative educational resource built by Group 1 to support digital learning, web concepts, and collaborative student project work.</p>
+            <div class=”hero-buttons”>
+                <a href=”#modules” class=”btn btn-primary”>Browse Modules</a>
+                <a href=”#about” class=”btn btn-outline”>Learn More</a>
             </div>
         </div>
     </section>
 
     <!—About Section 
-    <section id=”about” class=”about”>
+    <section id=”about” class=”section”>
         <div class=”container”>
             <div class=”section-title”>
-                <h2>About Our Project</h2>
-                <p>Transforming standard curriculum into interactive, digitally accessible resources.</p>
+                <h2>About Our Platform</h2>
+                <p>Designed to deliver clear, accessible, and structured course materials.</p>
             </div>
-            <div class=”about-grid”>
-                <div class=”about-card”>
-                    <div class=”icon”><i class=”fa-solid fa-laptop-code”></i></div>
-                    <h3>Digital Literacy</h3>
-                    <p>Building core technological skills necessary for modern academic and professional environments.</p>
+            <div class=”grid grid-3”>
+                <div class=”card”>
+                    <div class=”card-icon”>💻</div>
+                    <h3>Web Technologies</h3>
+                    <p>Structured markup, layout styling, and interactive scripting for modern web applications.</p>
                 </div>
-                <div class=”about-card”>
-                    <div class=”icon”><i class=”fa-solid fa-users”></i></div>
-                    <h3>Collaborative Learning</h3>
-                    <p>Encouraging peer-to-peer knowledge sharing and team-based problem solving through open tools.</p>
+                <div class=”card”>
+                    <div class=”card-icon”>🚀</div>
+                    <h3>Version Control</h3>
+                    <p>Using Git and GitHub for collaborative project tracking and web hosting via GitHub Pages.</p>
                 </div>
-                <div class=”about-card”>
-                    <div class=”icon”><i class=”fa-solid fa-book-open”></i></div>
-                    <h3>Open Access</h3>
-                    <p>Providing well-structured educational materials reachable anytime, anywhere via cloud platforms.</p>
+                <div class=”card”>
+                    <div class=”card-icon”>📚</div>
+                    <h3>Open Education</h3>
+                    <p>Free, continuous access to study guides, learning resources, and project documentation.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!—Learning Modules / Resource Library 
-    <section id=”modules” class=”modules”>
+    <!—Learning Modules Section 
+    <section id=”modules” class=”section bg-alt”>
         <div class=”container”>
             <div class=”section-title”>
                 <h2>Educational Modules</h2>
-                <p>Search or filter through our available course materials.</p>
+                <p>Search or browse available course topics.</p>
             </div>
 
-            <!—Search Bar 
             <div class=”search-box”>
-                <i class=”fa-solid fa-magnifying-glass”></i>
-                <input type=”text” id=”moduleSearch” placeholder=”Search for topics, e.g., ‘Web’, ‘Git’, ‘Data’...”>
+                <input type=”text” id=”moduleSearch” placeholder=”Search topics (e.g. HTML, Git, Systems)...”>
             </div>
 
-            <div class=”modules-grid” id=”modulesGrid”>
-                <div class=”module-card” data-category=”web”>
-                    <span class=”category-tag”>Web Dev</span>
-                    <h3>HTML5 & Semantic Web</h3>
-                    <p>Learn structural markup, modern HTML tags, accessibility standards, and document organization.</p>
-                    <a href=”#” class=”card-link”>View Notes <i class=”fa-solid fa-arrow-right”></i></a>
+            <div class=”grid grid-3” id=”modulesGrid”>
+                <div class=”card module-card”>
+                    <span class=”tag”>Module 1</span>
+                    <h3>HTML5 Fundamentals</h3>
+                    <p>Learn semantic elements, content structure, metadata, and accessibility standards.</p>
                 </div>
-                <div class=”module-card” data-category=”tools”>
-                    <span class=”category-tag”>Git & Cloud</span>
-                    <h3>Version Control with Git</h3>
-                    <p>Master commit histories, branching, remote repositories on GitHub, and deployment strategies.</p>
-                    <a href=”#” class=”card-link”>View Notes <i class=”fa-solid fa-arrow-right”></i></a>
+                <div class=”card module-card”>
+                    <span class=”tag”>Module 2</span>
+                    <h3>CSS3 Layout & Styling</h3>
+                    <p>Master Flexbox, CSS Grid, responsive design rules, and cross-device optimization.</p>
                 </div>
-                <div class=”module-card” data-category=”ict”>
-                    <span class=”category-tag”>ICT Skills</span>
-                    <h3>Information Systems</h3>
-                    <p>Understanding database architecture, networking fundamentals, and computer hardware essentials.</p>
-                    <a href=”#” class=”card-link”>View Notes <i class=”fa-solid fa-arrow-right”></i></a>
+                <div class=”card module-card”>
+                    <span class=”tag”>Module 3</span>
+                    <h3>JavaScript Logic</h3>
+                    <p>Build interactivity with DOM manipulation, event handlers, and form validation.</p>
                 </div>
-                <div class=”module-card” data-category=”web”>
-                    <span class=”category-tag”>CSS Design</span>
-                    <h3>Responsive UI/UX Styling</h3>
-                    <p>Discover CSS Flexbox, Grid, CSS Variables, and responsive design for mobile & desktop devices.</p>
-                    <a href=”#” class=”card-link”>View Notes <i class=”fa-solid fa-arrow-right”></i></a>
+                <div class=”card module-card”>
+                    <span class=”tag”>Module 4</span>
+                    <h3>Git & GitHub Deployment</h3>
+                    <p>Manage code versions, collaborate in teams, and publish live sites with GitHub Pages.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!—Team Section 
-    <section id=”team” class=”team”>
+    <section id=”team” class=”section”>
         <div class=”container”>
             <div class=”section-title”>
-                <h2>Meet Group 1</h2>
-                <p>The dedicated student team behind this course project.</p>
+                <h2>Project Team</h2>
+                <p>Group 1 student contributors for ICT 2102.</p>
             </div>
-            <div class=”team-grid”>
-                <div class=”team-card”>
-                    <div class=”avatar”><i class=”fa-solid fa-user-astronaut”></i></div>
+            <div class=”grid grid-2”>
+                <div class=”card team-card”>
+                    <div class=”avatar-placeholder”>PK</div>
                     <h3>Patrice Kisoma</h3>
-                    <p class=”role”>Team Lead & Developer</p>
-                    <p class=”desc”>Lead architect responsible for repository management, GitHub deployment, and core layout.</p>
+                    <span class=”role”>Lead Developer & Admin</span>
+                    <p>Managed code repository, GitHub Pages setup, and deployment pipeline.</p>
                 </div>
-                <div class=”team-card”>
-                    <div class=”avatar”><i class=”fa-solid fa-user-ninja”></i></div>
+                <div class=”card team-card”>
+                    <div class=”avatar-placeholder”>G1</div>
                     <h3>Group Collaborator</h3>
-                    <p class=”role”>Content & Research Specialist</p>
-                    <p class=”desc”>Responsible for content development, testing user interfaces, and module documentation.</p>
+                    <span class=”role”>Content & Testing</span>
+                    <p>Assisted in content creation, documentation, and user interface testing.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!—FAQ Section 
-    <section id=”faq” class=”faq”>
+    <!—Contact Section 
+    <section id=”contact” class=”section bg-alt”>
         <div class=”container”>
             <div class=”section-title”>
-                <h2>Frequently Asked Questions</h2>
-                <p>Find quick answers about our Group 1 Education Project.</p>
+                <h2>Get In Touch</h2>
+                <p>Send a message or inquiry to Group 1.</p>
             </div>
-            <div class=”faq-container”>
-                <div class=”faq-item”>
-                    <div class=”faq-question”>
-                        <span>What is the goal of this website?</span>
-                        <i class=”fa-solid fa-chevron-down”></i>
-                    </div>
-                    <div class=”faq-answer”>
-                        <p>This project fulfills the ICT 2102 requirement by demonstrating competence in local version control (Git), remote hosting (GitHub), and live deployment (GitHub Pages).</p>
-                    </div>
-                </div>
-                <div class=”faq-item”>
-                    <div class=”faq-question”>
-                        <span>How can teammates contribute?</span>
-                        <i class=”fa-solid fa-chevron-down”></i>
-                    </div>
-                    <div class=”faq-answer”>
-                        <p>Teammates added as GitHub collaborators can clone the repository, make edits locally in VS Code, commit, and push updates directly to the main branch.</p>
-                    </div>
-                </div>
-                <div class=”faq-item”>
-                    <div class=”faq-question”>
-                        <span>Is this website responsive?</span>
-                        <i class=”fa-solid fa-chevron-down”></i>
-                    </div>
-                    <div class=”faq-answer”>
-                        <p>Yes, the layout uses modern CSS Grid, Flexbox, and media queries to automatically adjust to smartphones, tablets, and desktop computers.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!—Contact Form Section 
-    <section id=”contact” class=”contact”>
-        <div class=”container”>
-            <div class=”section-title”>
-                <h2>Get in Touch</h2>
-                <p>Have questions or feedback for Group 1? Send us a message.</p>
-            </div>
-            <form id=”contactForm” class=”contact-form”>
+            <form id=”contactForm” class=”form-container”>
                 <div class=”form-group”>
-                    <label for=”name”>Full Name</label>
-                    <input type=”text” id=”name” required placeholder=”Enter your full name”>
+                    <label for=”name”>Your Name</label>
+                    <input type=”text” id=”name” required placeholder=”Enter your name”>
                 </div>
                 <div class=”form-group”>
                     <label for=”email”>Email Address</label>
-                    <input type=”email” id=”email” required placeholder=”Enter your email address”>
+                    <input type=”email” id=”email” required placeholder=”Enter your email”>
                 </div>
                 <div class=”form-group”>
                     <label for=”message”>Message</label>
-                    <textarea id=”message” rows=”5” required placeholder=”Type your message here...”></textarea>
+                    <textarea id=”message” rows=”4” required placeholder=”Type your message here...”></textarea>
                 </div>
-                <button type=”submit” class=”btn btn-primary btn-block”>Send Message</button>
-                <div id=”formStatus” class=”form-status”></div>
+                <button type=”submit” class=”btn btn-primary btn-full”>Send Message</button>
+                <div id=”formSuccess” class=”alert-success” style=”display: none;”></div>
             </form>
         </div>
     </section>
 
     <!—Footer 
     <footer>
-        <div class=”container footer-content”>
-            <p>&copy; 2026 ICT-2102 Group 1. Built with HTML5, CSS3, & JavaScript.</p>
-            <div class=”footer-links”>
-                <a href=https://github.com/kisomapatrice/ICT-2102-Group1-Education target=”_blank”><i class=”fa-brands fa-github”></i> GitHub Repo</a>
-            </div>
+        <div class=”container”>
+            <p>&copy; 2026 ICT 2102 Group 1. Educational Web Project.</p>
         </div>
     </footer>
 
-    <!—Custom JavaScript 
     <script src=”script.js”></script>
 </body>
 </html>
