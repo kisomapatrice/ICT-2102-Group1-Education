@@ -1,30 +1,40 @@
 # ICT 2102 Group 1 - Education Website
 
-This repository contains the Week 2 HTML Fundamentals assignment for Group 1.
+## Project
+Kaliro Bright Future College - a simple responsive educational website created for the ICT 2102 Week 2 HTML Fundamentals group assignment.
 
-## Main file
-- `index.html` - complete website with HTML, CSS and JavaScript in one file.
+## Files
+- `index.html` - complete website. HTML, CSS and the small mobile navigation script are contained in one file for easy study and presentation.
 
-## Features
-- Semantic HTML using `header`, `main`, `section`, `nav`, `article` and `footer`
-- More than three headings and paragraphs
-- Unordered programme list
-- Ordered joining process
-- `<strong>` and `<em>` formatting
-- Two HTML comments
-- Responsive navigation
-- Buttons and internal navigation
-- Relevant education images
-- Demo student login using JavaScript/localStorage
-- Demo contact form interaction
+## Main sections
+- Home / Welcome
+- About Us
+- Our Programmes
+- How to Join
+- Why Choose Us
+- Contact
+- Footer
 
-## Demo login
-Email: `student@group1.edu`
-Password: `ICT2102`
+## HTML fundamentals demonstrated
+- `<!DOCTYPE html>`
+- `<html>`, `<head>` and `<body>`
+- Meaningful `<title>`
+- Semantic `<header>`, `<nav>`, `<main>`, `<section>`, `<article>` and `<footer>`
+- Headings and paragraphs
+- Unordered list (`<ul>`)
+- Ordered list (`<ol>`)
+- `<strong>` and `<em>`
+- HTML comments
+- Attributes such as `class`, `id`, `href`, `alt`/ARIA attributes and `lang`
+- Responsive design for desktop, tablet and mobile screens
 
-## Important note
-GitHub Pages is a static hosting service. The login in this assignment is a front-end demonstration only. It is not a secure server-side authentication system.
+## Assignment roles
+Group 1 members should make meaningful contributions and commits to the GitHub repository as required by the lecturer.
 
-## Assignment alignment
-The site is structured around the ICT 2102 Week 2 Group 1 Education requirements: institution heading, Welcome, About Us, Our Programmes, How to Join, Why Choose Us and a footer with contact information.
-
+## Git commands
+```bash
+git status
+git add .
+git commit -m "Complete responsive Group 1 education website"
+git push origin main
+```

@@ -3,39 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ICT 2102 Group 1 Education educational website demonstrating HTML fundamentals.">
-    <title>Kaliro Education Centre | ICT 2102 Group 1</title>
+    <meta name="description" content="Group 1 ICT 2102 Education website created to demonstrate HTML fundamentals.">
+    <title>Kaliro Bright Future College | ICT 2102 Group 1</title>
 
     <style>
-        /* ICT 2102 GROUP 1 - COMPLETE SINGLE-FILE WEBSITE */
+        /* ==============================
+           ICT 2102 GROUP 1 - EDUCATION
+           Simple, responsive CSS design
+           ============================== */
+
         :root {
-            --primary: #123c69;
-            --primary-dark: #0b2948;
-            --secondary: #1f7a8c;
-            --accent: #f4b942;
-            --light: #f4f8fb;
+            --navy: #12355b;
+            --blue: #1d6fa5;
+            --sky: #eaf5ff;
+            --gold: #f2b705;
+            --cream: #fffaf0;
             --white: #ffffff;
-            --dark: #17202a;
-            --muted: #64748b;
-            --border: #dbe6ee;
-            --success: #147d5a;
-            --shadow: 0 14px 35px rgba(18, 60, 105, 0.12);
+            --dark: #1f2937;
+            --muted: #667085;
+            --line: #dbe4ee;
+            --success: #176b4d;
+            --shadow: 0 12px 30px rgba(18, 53, 91, 0.10);
             --radius: 18px;
         }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 82px;
+        }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
             line-height: 1.6;
             color: var(--dark);
-            background: #f8fbfd;
+            background: #f7fafc;
         }
 
-        a { color: inherit; text-decoration: none; }
-        img { max-width: 100%; display: block; }
-        button, input, textarea { font: inherit; }
-        button { cursor: pointer; }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        button {
+            font: inherit;
+        }
 
         .container {
             width: min(1120px, 92%);
@@ -47,9 +69,9 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
+            background: rgba(255, 255, 255, 0.97);
+            border-bottom: 1px solid var(--line);
+            box-shadow: 0 4px 16px rgba(18, 53, 91, 0.06);
         }
 
         .nav-wrap {
@@ -57,727 +79,871 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 20px;
+            gap: 24px;
         }
 
         .brand {
             display: flex;
             align-items: center;
             gap: 12px;
+            color: var(--navy);
             font-weight: 800;
-            color: var(--primary);
-            white-space: nowrap;
         }
 
-        .brand-mark {
+        .brand-icon {
             width: 44px;
             height: 44px;
             border-radius: 12px;
             display: grid;
             place-items: center;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: var(--navy);
             color: var(--white);
-            font-weight: 900;
-            box-shadow: var(--shadow);
+            font-size: 22px;
         }
 
-        nav ul {
+        .brand-text span {
+            display: block;
+            font-size: 0.76rem;
+            color: var(--blue);
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
             display: flex;
             align-items: center;
-            gap: 18px;
+            gap: 6px;
             list-style: none;
         }
 
-        nav a {
-            color: #334155;
+        .nav-links a {
+            display: inline-block;
+            padding: 10px 13px;
+            border-radius: 10px;
+            color: var(--dark);
             font-size: 0.95rem;
             font-weight: 700;
-            transition: 0.2s ease;
         }
 
-        nav a:hover { color: var(--secondary); }
-
-        .nav-actions { display: flex; align-items: center; gap: 10px; }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 11px 17px;
-            border: 0;
-            border-radius: 999px;
-            font-weight: 800;
-            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+        .nav-links a:hover,
+        .nav-links a:focus {
+            background: var(--sky);
+            color: var(--blue);
         }
-        .btn:hover { transform: translateY(-2px); }
-        .btn-primary { background: var(--primary); color: var(--white); box-shadow: 0 10px 22px rgba(18, 60, 105, .2); }
-        .btn-primary:hover { background: var(--primary-dark); }
-        .btn-accent { background: var(--accent); color: #2f2a18; }
-        .btn-outline { background: transparent; color: var(--primary); border: 2px solid var(--primary); }
-        .btn-small { padding: 9px 14px; font-size: .9rem; }
 
-        .menu-toggle {
+        .menu-button {
             display: none;
             border: 0;
-            background: var(--light);
-            color: var(--primary);
+            background: var(--navy);
+            color: var(--white);
             width: 44px;
             height: 44px;
-            border-radius: 12px;
-            font-size: 1.3rem;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1.35rem;
         }
 
         /* Hero */
         .hero {
-            min-height: 650px;
-            display: grid;
-            align-items: center;
-            background:
-                linear-gradient(90deg, rgba(7, 25, 45, .88), rgba(7, 25, 45, .55), rgba(7, 25, 45, .25)),
-                url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1800&q=85') center/cover;
+            background: linear-gradient(135deg, var(--navy), var(--blue));
             color: var(--white);
+            overflow: hidden;
         }
 
         .hero-grid {
+            min-height: 520px;
             display: grid;
-            grid-template-columns: 1.15fr .85fr;
-            gap: 45px;
+            grid-template-columns: 1.05fr 0.95fr;
             align-items: center;
-            padding: 90px 0;
+            gap: 50px;
+            padding: 62px 0;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            padding: 8px 13px;
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.24);
+            border-radius: 999px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 5vw, 4.4rem);
+            line-height: 1.08;
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            font-size: 1.08rem;
+            color: #eaf4ff;
+            margin-bottom: 26px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 18px;
+            border-radius: 10px;
+            font-weight: 800;
+            border: 2px solid transparent;
+        }
+
+        .button-primary {
+            background: var(--gold);
+            color: #17202a;
+        }
+
+        .button-primary:hover {
+            background: #ffd05a;
+        }
+
+        .button-light {
+            background: transparent;
+            color: var(--white);
+            border-color: rgba(255, 255, 255, 0.55);
+        }
+
+        .button-light:hover {
+            background: rgba(255, 255, 255, 0.10);
+        }
+
+        /* Original education illustration - no external image required */
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+        }
+
+        .school-card {
+            width: min(450px, 100%);
+            padding: 20px;
+            background: var(--white);
+            border-radius: 24px;
+            box-shadow: 0 22px 55px rgba(0, 0, 0, 0.20);
+        }
+
+        .school-scene {
+            position: relative;
+            min-height: 315px;
+            border-radius: 18px;
+            overflow: hidden;
+            background: linear-gradient(#dff3ff 0 64%, #a7d36c 64% 100%);
+        }
+
+        .sun {
+            position: absolute;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            right: 34px;
+            top: 30px;
+            background: #ffd75a;
+        }
+
+        .school-building {
+            position: absolute;
+            left: 12%;
+            right: 12%;
+            bottom: 52px;
+            height: 155px;
+            background: #f8fafc;
+            border: 4px solid #c3d2df;
+            border-radius: 10px 10px 4px 4px;
+        }
+
+        .school-roof {
+            position: absolute;
+            left: 7%;
+            right: 7%;
+            top: -34px;
+            height: 60px;
+            background: var(--navy);
+            clip-path: polygon(50% 0, 100% 100%, 0 100%);
+        }
+
+        .school-door {
+            position: absolute;
+            width: 48px;
+            height: 75px;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            background: var(--navy);
+            border-radius: 6px 6px 0 0;
+        }
+
+        .school-window {
+            position: absolute;
+            width: 52px;
+            height: 46px;
+            top: 50px;
+            background: #9fd5f5;
+            border: 5px solid var(--navy);
+        }
+
+        .window-left { left: 14%; }
+        .window-right { right: 14%; }
+
+        .tree {
+            position: absolute;
+            bottom: 45px;
+            width: 34px;
+            height: 74px;
+            background: #815b3a;
+            border-radius: 5px;
+        }
+
+        .tree::before {
+            content: "";
+            position: absolute;
+            width: 90px;
+            height: 90px;
+            left: 50%;
+            top: -55px;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            background: #3d9148;
+        }
+
+        .tree-one { left: 5%; }
+        .tree-two { right: 5%; }
+
+        .hero-note {
+            padding: 14px 4px 0;
+            color: #475467;
+            font-size: 0.88rem;
+            text-align: center;
+        }
+
+        /* General sections */
+        section {
+            padding: 76px 0;
+        }
+
+        .section-heading {
+            max-width: 720px;
+            margin: 0 auto 38px;
+            text-align: center;
         }
 
         .eyebrow {
             display: inline-block;
-            padding: 7px 13px;
-            border-radius: 999px;
-            background: rgba(244, 185, 66, .18);
-            color: #ffe19c;
-            border: 1px solid rgba(244, 185, 66, .4);
+            margin-bottom: 8px;
+            font-size: 0.78rem;
             font-weight: 800;
-            letter-spacing: .5px;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 {
-            font-size: clamp(2.4rem, 6vw, 4.7rem);
-            line-height: 1.03;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            max-width: 680px;
-            color: #e8eef5;
-            font-size: 1.08rem;
-            margin-bottom: 28px;
-        }
-
-        .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
-
-        .hero-card {
-            background: rgba(255, 255, 255, .1);
-            border: 1px solid rgba(255, 255, 255, .2);
-            border-radius: var(--radius);
-            padding: 25px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 20px 60px rgba(0,0,0,.18);
-        }
-
-        .hero-card h2 { font-size: 1.25rem; margin-bottom: 12px; }
-        .hero-card ul { padding-left: 19px; color: #f7fbff; }
-        .hero-card li + li { margin-top: 8px; }
-
-        /* General sections */
-        section { padding: 86px 0; }
-        section:nth-of-type(even) { background: var(--white); }
-
-        .section-head { max-width: 760px; margin-bottom: 35px; }
-        .section-head span {
-            color: var(--secondary);
-            font-weight: 900;
+            letter-spacing: 0.12em;
+            color: var(--blue);
             text-transform: uppercase;
-            font-size: .8rem;
-            letter-spacing: 1.5px;
         }
-        .section-head h2 { font-size: clamp(1.9rem, 4vw, 3rem); margin: 7px 0 10px; color: var(--primary); }
-        .section-head p { color: var(--muted); }
+
+        .section-heading h2 {
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            color: var(--navy);
+            margin-bottom: 10px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+        }
 
         .about-grid,
-        .contact-grid,
-        .login-grid {
+        .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            align-items: start;
+            gap: 28px;
+            align-items: stretch;
         }
 
-        .image-card {
-            overflow: hidden;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            min-height: 370px;
-        }
-        .image-card img { width: 100%; height: 100%; object-fit: cover; }
-
-        .content-card {
+        .card {
             background: var(--white);
-            border: 1px solid var(--border);
+            border: 1px solid var(--line);
             border-radius: var(--radius);
             padding: 28px;
             box-shadow: var(--shadow);
         }
-        .content-card h3 { color: var(--primary); margin-bottom: 10px; font-size: 1.25rem; }
-        .content-card p + p { margin-top: 15px; }
 
-        /* Cards */
-        .cards {
+        .card h3 {
+            color: var(--navy);
+            margin-bottom: 10px;
+        }
+
+        .card p + p {
+            margin-top: 12px;
+        }
+
+        .feature-list {
+            list-style: none;
+            display: grid;
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .feature-list li {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        .check {
+            flex: 0 0 24px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: #e1f4eb;
+            color: var(--success);
+            font-weight: 900;
+            font-size: 0.8rem;
+        }
+
+        /* Programmes */
+        .programmes {
+            background: var(--sky);
+        }
+
+        .programme-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
         }
-        .card {
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 25px;
-            box-shadow: 0 10px 26px rgba(18,60,105,.07);
-            transition: .2s ease;
-        }
-        .card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
-        .icon {
-            width: 52px;
-            height: 52px;
-            border-radius: 15px;
-            display: grid;
-            place-items: center;
-            background: #e8f4f7;
-            color: var(--secondary);
-            font-size: 1.4rem;
-            margin-bottom: 16px;
-        }
-        .card h3 { color: var(--primary); margin-bottom: 8px; }
-        .card p { color: var(--muted); }
 
-        /* Programmes */
-        .programmes-grid {
-            display: grid;
-            grid-template-columns: 1.1fr .9fr;
-            gap: 30px;
-            align-items: stretch;
+        .programme-card {
+            background: var(--white);
+            border: 1px solid #d7e7f4;
+            border-radius: 16px;
+            padding: 24px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        .programme-list {
-            list-style: none;
-            display: grid;
-            gap: 11px;
-            margin-top: 18px;
-        }
-        .programme-list li {
-            padding: 15px 17px;
-            background: #f8fbfd;
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            font-weight: 700;
-        }
-        .programme-list li::before { content: '✓'; color: var(--success); margin-right: 10px; }
-        .quote-card {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            background: linear-gradient(135deg, #123c69, #1f7a8c);
-            color: var(--white);
-            border-radius: var(--radius);
-            padding: 35px;
+
+        .programme-card:hover {
+            transform: translateY(-4px);
             box-shadow: var(--shadow);
         }
-        .quote-card h3 { font-size: 1.8rem; margin-bottom: 14px; }
-        .quote-card p { color: #e7f6f8; margin-bottom: 20px; }
 
-        /* Ordered list */
+        .programme-number {
+            display: inline-grid;
+            place-items: center;
+            width: 38px;
+            height: 38px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            background: var(--navy);
+            color: var(--white);
+            font-weight: 800;
+        }
+
+        .programme-card h3 {
+            color: var(--navy);
+            margin-bottom: 8px;
+        }
+
+        .programme-card p {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        /* How to join */
         .steps {
+            counter-reset: join-step;
             list-style: none;
-            counter-reset: steps;
             display: grid;
-            gap: 15px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
         }
+
         .steps li {
-            counter-increment: steps;
             position: relative;
-            padding: 18px 18px 18px 60px;
+            padding: 24px 20px 22px;
             background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: 15px;
-            box-shadow: 0 7px 20px rgba(18,60,105,.05);
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
         }
-        .steps li::before {
-            content: counter(steps);
-            position: absolute;
-            left: 16px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
+
+        .step-number {
+            width: 42px;
+            height: 42px;
             display: grid;
             place-items: center;
-            background: var(--primary);
-            color: var(--white);
+            border-radius: 50%;
+            background: var(--gold);
+            color: #222;
             font-weight: 900;
+            margin-bottom: 14px;
+        }
+
+        .steps h3 {
+            color: var(--navy);
+            margin-bottom: 7px;
+        }
+
+        .steps p {
+            color: var(--muted);
+            font-size: 0.94rem;
         }
 
         /* Why choose us */
-        .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
-        .why-item { text-align: center; padding: 22px; background: #f8fbfd; border-radius: 16px; border: 1px solid var(--border); }
-        .why-item strong { display: block; color: var(--primary); margin-bottom: 8px; }
-        .why-item em { color: var(--secondary); }
+        .why {
+            background: var(--cream);
+        }
 
-        /* Team */
-        .team-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 800px; }
-        .member { display: flex; align-items: center; gap: 15px; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
-        .avatar { width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: var(--white); font-weight: 900; }
-        .member h3 { color: var(--primary); font-size: 1rem; }
-        .member p { color: var(--muted); font-size: .9rem; }
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .why-card {
+            background: var(--white);
+            border: 1px solid #efe4c8;
+            border-radius: 16px;
+            padding: 24px;
+        }
+
+        .why-card h3 {
+            margin-bottom: 8px;
+            color: var(--navy);
+        }
+
+        .why-card p {
+            color: var(--muted);
+        }
 
         /* Contact */
-        .contact-details { display: grid; gap: 13px; margin-top: 18px; }
-        .contact-row { padding: 15px; border-radius: 12px; background: #f8fbfd; border: 1px solid var(--border); }
-        .form { display: grid; gap: 13px; }
-        .field label { display: block; margin-bottom: 6px; font-weight: 800; color: var(--primary); }
-        .field input, .field textarea {
-            width: 100%;
-            border: 1px solid var(--border);
-            background: #fff;
-            border-radius: 12px;
-            padding: 12px 13px;
-            outline: none;
-        }
-        .field input:focus, .field textarea:focus { border-color: var(--secondary); box-shadow: 0 0 0 3px rgba(31,122,140,.1); }
-        .field textarea { min-height: 135px; resize: vertical; }
-        .form-message { margin-top: 7px; font-weight: 700; min-height: 25px; }
-
-        /* Login */
-        .login-box {
-            max-width: 680px;
-            margin: 0 auto;
-            background: var(--white);
-            border: 1px solid var(--border);
+        .contact-box {
+            background: var(--navy);
+            color: var(--white);
             border-radius: var(--radius);
-            padding: 32px;
+            padding: 30px;
+        }
+
+        .contact-box h3 {
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+
+        .contact-box p {
+            color: #dcecff;
+            margin-bottom: 10px;
+        }
+
+        .contact-list {
+            list-style: none;
+            display: grid;
+            gap: 9px;
+        }
+
+        .contact-list strong {
+            color: var(--gold);
+        }
+
+        .simple-note {
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 30px;
             box-shadow: var(--shadow);
         }
-        .login-box h3 { color: var(--primary); font-size: 1.6rem; margin-bottom: 7px; }
-        .demo-note { margin-top: 14px; background: #fff8e5; border: 1px solid #f0d28a; padding: 13px; border-radius: 12px; font-size: .92rem; }
-        .portal { display: none; margin-top: 20px; padding: 20px; border-radius: 14px; background: #eefaf5; border: 1px solid #bfe9d5; }
-        .portal.visible { display: block; }
 
         /* Footer */
-        footer { background: #0b2036; color: #dbe7f1; padding: 35px 0; }
-        .footer-grid { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; align-items: center; }
-        .footer-brand { font-weight: 900; color: var(--white); }
-        .footer-note { color: #a9bbcc; font-size: .9rem; }
+        footer {
+            background: #0b223b;
+            color: #d9e8f6;
+            padding: 26px 0;
+        }
 
-        /* Mobile */
+        .footer-grid {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+        }
+
+        .footer-grid p {
+            font-size: 0.92rem;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        /* Responsive design: tablet */
         @media (max-width: 900px) {
-            .hero-grid, .about-grid, .programmes-grid, .contact-grid, .login-grid { grid-template-columns: 1fr; }
-            .cards { grid-template-columns: repeat(2, 1fr); }
-            .why-grid { grid-template-columns: repeat(2, 1fr); }
-            nav { display: none; position: absolute; left: 0; right: 0; top: 76px; background: var(--white); padding: 18px 4%; border-bottom: 1px solid var(--border); box-shadow: var(--shadow); }
-            nav.open { display: block; }
-            nav ul { flex-direction: column; align-items: flex-start; }
-            .menu-toggle { display: block; }
+            .hero-grid,
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-grid {
+                min-height: auto;
+            }
+
+            .hero-content {
+                text-align: center;
+            }
+
+            .hero-content p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .programme-grid,
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
-        @media (max-width: 600px) {
-            .nav-actions .btn-outline { display: none; }
-            .hero { min-height: 720px; }
-            section { padding: 65px 0; }
-            .cards, .why-grid, .team-grid { grid-template-columns: 1fr; }
-            .hero-actions .btn { width: 100%; }
-            .hero-actions { flex-direction: column; }
-            .hero-card { margin-top: 10px; }
-        }
+        /* Responsive design: mobile */
+        @media (max-width: 680px) {
+            .nav-wrap {
+                min-height: 68px;
+            }
 
-        .back-to-top {
-            position: fixed;
-            right: 17px;
-            bottom: 17px;
-            width: 44px;
-            height: 44px;
-            border: 0;
-            border-radius: 50%;
-            background: var(--accent);
-            color: #2f2a18;
-            font-weight: 900;
-            box-shadow: var(--shadow);
-            display: none;
-            z-index: 999;
+            .menu-button {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                left: 4%;
+                right: 4%;
+                top: 72px;
+                padding: 12px;
+                background: var(--white);
+                border: 1px solid var(--line);
+                border-radius: 14px;
+                box-shadow: var(--shadow);
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .nav-links a {
+                width: 100%;
+            }
+
+            section {
+                padding: 58px 0;
+            }
+
+            .programme-grid,
+            .why-grid,
+            .steps {
+                grid-template-columns: 1fr;
+            }
+
+            .card,
+            .contact-box,
+            .simple-note {
+                padding: 22px;
+            }
+
+            .school-scene {
+                min-height: 250px;
+            }
+
+            .footer-grid {
+                align-items: flex-start;
+                flex-direction: column;
+            }
         }
-        .back-to-top.show { display: grid; place-items: center; }
     </style>
 </head>
 
 <body>
-    <!-- HTML COMMENT 1: Main navigation for the educational website -->
+    <!-- The header contains the website name and navigation links. -->
     <header>
         <div class="container nav-wrap">
-            <a class="brand" href="#home" aria-label="Kaliro Education Centre home">
-                <span class="brand-mark">KE</span>
-                <span>Kaliro Education Centre</span>
+            <a class="brand" href="#home" aria-label="Kaliro Bright Future College home">
+                <span class="brand-icon">📚</span>
+                <span class="brand-text">
+                    Kaliro Bright Future College
+                    <span>ICT 2102 • Group 1</span>
+                </span>
             </a>
 
-            <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
+            <button class="menu-button" type="button" aria-label="Open navigation" aria-controls="site-menu" aria-expanded="false" onclick="toggleMenu()">☰</button>
 
-            <nav id="mainNav" aria-label="Main navigation">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#programmes">Programmes</a></li>
-                    <li><a href="#join">How to Join</a></li>
-                    <li><a href="#team">Team</a></li>
-                    <li><a href="#contact">Contact</a></li>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links" id="site-menu">
+                    <li><a href="#home" onclick="closeMenu()">Home</a></li>
+                    <li><a href="#about" onclick="closeMenu()">About</a></li>
+                    <li><a href="#programmes" onclick="closeMenu()">Programmes</a></li>
+                    <li><a href="#join" onclick="closeMenu()">How to Join</a></li>
+                    <li><a href="#why" onclick="closeMenu()">Why Us</a></li>
+                    <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
                 </ul>
             </nav>
-
-            <div class="nav-actions">
-                <a class="btn btn-outline btn-small" href="#programmes">Explore</a>
-                <a class="btn btn-primary btn-small" href="#login">Student Login</a>
-            </div>
         </div>
     </header>
 
     <main>
-        <!-- HOME / WELCOME SECTION -->
+        <!-- Welcome section: this is the main introduction to the institution. -->
         <section class="hero" id="home">
             <div class="container hero-grid">
-                <div>
-                    <span class="eyebrow">ICT 2102 • GROUP 1 • EDUCATION</span>
-                    <h1>Learn Today. Build Tomorrow.</h1>
+                <div class="hero-content">
+                    <span class="hero-tag">WELCOME TO OUR EDUCATIONAL WEBSITE</span>
+                    <h1>Learning Today. Building Tomorrow.</h1>
                     <p>
-                        Welcome to <strong>Kaliro Education Centre</strong>, a student-focused educational website created by Group 1.
-                        Our platform demonstrates clear HTML structure, meaningful content, lists, formatting, navigation,
-                        semantic sections, and a simple interactive student portal.
+                        Welcome to <strong>Kaliro Bright Future College</strong>, a model learning institution focused on knowledge, practical skills and positive character development. We help learners prepare for further education and a changing world.
                     </p>
-                    <div class="hero-actions">
-                        <a class="btn btn-accent" href="#programmes">View Programmes</a>
-                        <a class="btn btn-outline" style="background:rgba(255,255,255,.12);color:#fff;border-color:#fff;" href="#join">How to Join</a>
+                    <div class="hero-buttons">
+                        <a class="button button-primary" href="#programmes">Explore Programmes</a>
+                        <a class="button button-light" href="#join">How to Join</a>
                     </div>
                 </div>
 
-                <aside class="hero-card">
-                    <h2>What We Believe</h2>
-                    <ul>
-                        <li>Every learner deserves an opportunity to grow.</li>
-                        <li>Practical learning connects knowledge to real life.</li>
-                        <li>Technology can make education more accessible.</li>
-                        <li>Strong character supports academic success.</li>
-                    </ul>
-                </aside>
+                <div class="hero-visual" aria-label="Simple illustration of a school building">
+                    <div class="school-card">
+                        <div class="school-scene">
+                            <div class="sun"></div>
+                            <div class="tree tree-one"></div>
+                            <div class="tree tree-two"></div>
+                            <div class="school-building">
+                                <div class="school-roof"></div>
+                                <div class="school-window window-left"></div>
+                                <div class="school-window window-right"></div>
+                                <div class="school-door"></div>
+                            </div>
+                        </div>
+                        <p class="hero-note">A simple education illustration created with HTML and CSS.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- ABOUT US -->
+        <!-- About section demonstrates headings and paragraphs. -->
         <section id="about">
             <div class="container">
-                <div class="section-head">
-                    <span>About Us</span>
-                    <h2>A simple place to learn, explore and grow.</h2>
-                    <p>Our fictional learning centre was designed especially for the ICT 2102 Group 1 HTML assignment.</p>
+                <div class="section-heading">
+                    <span class="eyebrow">About Us</span>
+                    <h2>Education with purpose</h2>
+                    <p>Our website presents a simple example of how HTML can organise information for an educational institution.</p>
                 </div>
 
                 <div class="about-grid">
-                    <div class="image-card">
-                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=85" alt="Students learning with computers in a modern learning environment">
-                    </div>
-                    <div class="content-card">
+                    <article class="card">
                         <h3>Who We Are</h3>
                         <p>
-                            Kaliro Education Centre is presented as a welcoming learning community where students can develop
-                            academic knowledge, digital skills, communication ability and practical problem-solving skills.
+                            Kaliro Bright Future College is presented as a learning community where students are encouraged to study, create, communicate and serve their communities.
                         </p>
                         <p>
-                            We encourage learners to ask questions, work together and use technology responsibly. Our goal is to
-                            support <strong>active learning</strong> while keeping education <em>clear, practical and engaging</em>.
+                            We value <strong>discipline, teamwork and continuous learning</strong> while giving learners opportunities to build useful academic and digital skills.
                         </p>
-                        <p>
-                            This webpage demonstrates core HTML elements including headings, paragraphs, lists, semantic sections,
-                            attributes, comments, links, buttons, images, and text formatting.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+                    </article>
 
-        <!-- PROGRAMMES -->
-        <section id="programmes">
-            <div class="container">
-                <div class="section-head">
-                    <span>Our Programmes</span>
-                    <h2>Subjects and learning areas</h2>
-                    <p>Explore the main subjects represented on our educational platform.</p>
-                </div>
-
-                <div class="programmes-grid">
-                    <div class="content-card">
-                        <h3>Programmes Offered</h3>
-                        <ul class="programme-list">
-                            <li>Mathematics and Applied Mathematics</li>
-                            <li>Information and Communication Technology (ICT)</li>
-                            <li>English Language and Communication</li>
-                            <li>Biology and Environmental Science</li>
-                            <li>Physics and Practical Science</li>
-                            <li>Entrepreneurship and Business Skills</li>
-                            <li>Computer Applications and Digital Literacy</li>
+                    <article class="card">
+                        <h3>Our Learning Values</h3>
+                        <ul class="feature-list">
+                            <li><span class="check">✓</span><span>Respect for teachers, fellow learners and the wider community.</span></li>
+                            <li><span class="check">✓</span><span>Responsible use of technology and learning resources.</span></li>
+                            <li><span class="check">✓</span><span>Teamwork, creativity and problem-solving.</span></li>
+                            <li><span class="check">✓</span><span>A commitment to <em>lifelong learning</em> and personal improvement.</span></li>
                         </ul>
-                    </div>
-
-                    <div class="quote-card">
-                        <h3>Learning is a journey.</h3>
-                        <p>
-                            We combine classroom knowledge, practical activities and digital resources so that learners can
-                            understand ideas and apply them beyond the classroom.
-                        </p>
-                        <a class="btn btn-accent" href="#join">Start Your Journey</a>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- HOW TO JOIN -->
+        <!-- Programme section includes an unordered list of more than five programmes. -->
+        <section class="programmes" id="programmes">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">Our Programmes</span>
+                    <h2>Subjects and learning areas</h2>
+                    <p>Our example institution offers several areas that can help learners develop academic and practical skills.</p>
+                </div>
+
+                <ul class="programme-grid">
+                    <li class="programme-card">
+                        <span class="programme-number">01</span>
+                        <h3>Mathematics</h3>
+                        <p>Builds logical reasoning, problem-solving and quantitative skills.</p>
+                    </li>
+                    <li class="programme-card">
+                        <span class="programme-number">02</span>
+                        <h3>ICT</h3>
+                        <p>Introduces digital literacy, computer applications and responsible technology use.</p>
+                    </li>
+                    <li class="programme-card">
+                        <span class="programme-number">03</span>
+                        <h3>English</h3>
+                        <p>Develops communication, reading, writing and presentation skills.</p>
+                    </li>
+                    <li class="programme-card">
+                        <span class="programme-number">04</span>
+                        <h3>Biology</h3>
+                        <p>Explores living organisms, health, environment and scientific inquiry.</p>
+                    </li>
+                    <li class="programme-card">
+                        <span class="programme-number">05</span>
+                        <h3>Physics</h3>
+                        <p>Introduces scientific principles through observation, measurement and experiments.</p>
+                    </li>
+                    <li class="programme-card">
+                        <span class="programme-number">06</span>
+                        <h3>Agriculture</h3>
+                        <p>Connects classroom learning with sustainable farming and food production.</p>
+                    </li>
+                    <li class="programme-card">
+                        <span class="programme-number">07</span>
+                        <h3>Entrepreneurship</h3>
+                        <p>Encourages creativity, initiative, planning and responsible business ideas.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Ordered list: explains the steps required for joining. -->
         <section id="join">
             <div class="container">
-                <div class="section-head">
-                    <span>How to Join</span>
-                    <h2>Four easy steps for a new learner</h2>
-                    <p>Follow these steps to demonstrate an ordered list and a simple admission process.</p>
+                <div class="section-heading">
+                    <span class="eyebrow">How to Join</span>
+                    <h2>Four simple steps</h2>
+                    <p>Prospective learners can follow these basic steps to begin the admission process.</p>
                 </div>
 
                 <ol class="steps">
-                    <li><strong>Explore the programmes.</strong> Read about the subjects and choose the learning area that interests you.</li>
-                    <li><strong>Prepare your details.</strong> Have your basic academic and contact information ready.</li>
-                    <li><strong>Complete the application.</strong> Submit the required information through the appropriate school office or process.</li>
-                    <li><strong>Receive joining information.</strong> Follow the instructions provided for orientation, classes and learning resources.</li>
+                    <li>
+                        <div class="step-number">1</div>
+                        <h3>Learn About Us</h3>
+                        <p>Read about the institution, programmes and learning values.</p>
+                    </li>
+                    <li>
+                        <div class="step-number">2</div>
+                        <h3>Choose a Programme</h3>
+                        <p>Select subjects or a programme that matches your learning goals.</p>
+                    </li>
+                    <li>
+                        <div class="step-number">3</div>
+                        <h3>Apply</h3>
+                        <p>Contact the institution and complete the required admission process.</p>
+                    </li>
+                    <li>
+                        <div class="step-number">4</div>
+                        <h3>Start Learning</h3>
+                        <p>Prepare for the new term, attend orientation and begin your studies.</p>
+                    </li>
                 </ol>
             </div>
         </section>
 
-        <!-- WHY CHOOSE US -->
-        <section id="why">
+        <!-- Why Choose Us: specifically demonstrates strong and emphasis tags. -->
+        <section class="why" id="why">
             <div class="container">
-                <div class="section-head">
-                    <span>Why Choose Us</span>
-                    <h2>A learning experience built around the student</h2>
-                    <p>We focus on practical and supportive learning habits.</p>
+                <div class="section-heading">
+                    <span class="eyebrow">Why Choose Us</span>
+                    <h2>A supportive learning environment</h2>
+                    <p>These points demonstrate how HTML text formatting can emphasise important information.</p>
                 </div>
 
                 <div class="why-grid">
-                    <div class="why-item">
-                        <strong>Supportive Learning</strong>
-                        <em>Ask, practise and improve.</em>
-                    </div>
-                    <div class="why-item">
-                        <strong>Digital Skills</strong>
-                        <em>Learn to use technology well.</em>
-                    </div>
-                    <div class="why-item">
-                        <strong>Practical Work</strong>
-                        <em>Connect theory to real tasks.</em>
-                    </div>
-                    <div class="why-item">
-                        <strong>Teamwork</strong>
-                        <em>Learn through collaboration.</em>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- TEAM -->
-        <section id="team">
-            <div class="container">
-                <div class="section-head">
-                    <span>Project Team</span>
-                    <h2>Group 1 contributors</h2>
-                    <p>The assignment states that each member should make a meaningful contribution and commit work to GitHub.</p>
-                </div>
-
-                <div class="team-grid">
-                    <article class="member">
-                        <div class="avatar">PK</div>
-                        <div>
-                            <h3>Patrice Kisoma</h3>
-                            <p>HTML Developer • GitHub & deployment</p>
-                        </div>
+                    <article class="why-card">
+                        <h3>Quality Learning</h3>
+                        <p><strong>Dedicated learning</strong> helps students understand concepts and apply knowledge in practical situations.</p>
                     </article>
-                    <article class="member">
-                        <div class="avatar">G1</div>
-                        <div>
-                            <h3>Group 1 Member</h3>
-                            <p>Content Designer • Tester • Presenter</p>
-                        </div>
+                    <article class="why-card">
+                        <h3>Digital Skills</h3>
+                        <p>We encourage <em>creative and responsible</em> use of technology for learning and communication.</p>
+                    </article>
+                    <article class="why-card">
+                        <h3>Character &amp; Teamwork</h3>
+                        <p><strong>Respect, discipline and teamwork</strong> help learners grow academically and socially.</p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- CONTACT -->
+        <!-- Contact section gives the website a clear ending before the footer. -->
         <section id="contact">
             <div class="container">
-                <div class="section-head">
-                    <span>Contact Us</span>
-                    <h2>Send us a message</h2>
-                    <p>Use this demo form to practise HTML forms and interactive JavaScript.</p>
+                <div class="section-heading">
+                    <span class="eyebrow">Contact</span>
+                    <h2>We welcome learners and questions</h2>
+                    <p>Use the sample contact details below for this class assignment website.</p>
                 </div>
 
                 <div class="contact-grid">
-                    <div class="content-card">
-                        <h3>Kaliro Education Centre</h3>
-                        <div class="contact-details">
-                            <div class="contact-row"><strong>Location:</strong> Kaliro, Uganda</div>
-                            <div class="contact-row"><strong>Email:</strong> group1@example.com</div>
-                            <div class="contact-row"><strong>Study Hours:</strong> Monday – Friday, 8:00 AM – 5:00 PM</div>
-                            <div class="contact-row"><strong>Purpose:</strong> ICT 2102 educational web project</div>
-                        </div>
+                    <div class="contact-box">
+                        <h3>Contact Information</h3>
+                        <ul class="contact-list">
+                            <li><strong>Institution:</strong> Kaliro Bright Future College</li>
+                            <li><strong>Location:</strong> Kaliro, Uganda</li>
+                            <li><strong>Phone:</strong> +256 700 000 000</li>
+                            <li><strong>Email:</strong> info@brightfuture.example</li>
+                        </ul>
                     </div>
 
-                    <form class="content-card form" id="contactForm">
-                        <div class="field">
-                            <label for="name">Your Name</label>
-                            <input id="name" name="name" type="text" placeholder="Enter your name" required>
-                        </div>
-                        <div class="field">
-                            <label for="email">Email Address</label>
-                            <input id="email" name="email" type="email" placeholder="Enter your email" required>
-                        </div>
-                        <div class="field">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
-                        </div>
-                        <button class="btn btn-primary" type="submit">Send Message</button>
-                        <p class="form-message" id="contactMessage" aria-live="polite"></p>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        <!-- STUDENT LOGIN -->
-        <section id="login">
-            <div class="container">
-                <div class="section-head">
-                    <span>Student Portal</span>
-                    <h2>Demo Student Login</h2>
-                    <p>This small client-side login is included as an extra interactive feature for the project.</p>
-                </div>
-
-                <div class="login-box">
-                    <form class="form" id="loginForm">
-                        <div class="field">
-                            <label for="loginEmail">Student Email</label>
-                            <input id="loginEmail" type="email" placeholder="student@group1.edu" required>
-                        </div>
-                        <div class="field">
-                            <label for="loginPassword">Password</label>
-                            <input id="loginPassword" type="password" placeholder="Enter demo password" required>
-                        </div>
-                        <button class="btn btn-primary" type="submit">Login to Student Portal</button>
-                        <p class="form-message" id="loginMessage" aria-live="polite"></p>
-                    </form>
-
-                    <div class="demo-note">
-                        <strong>Demo account:</strong> student@group1.edu &nbsp; | &nbsp; <strong>Password:</strong> ICT2102
-                    </div>
-
-                    <div class="portal" id="portalBox">
-                        <h3>Welcome to the Student Portal!</h3>
-                        <p>You are successfully logged in to the <strong>demo interface</strong>. You can return to the website using the navigation above.</p>
-                        <br>
-                        <button class="btn btn-accent btn-small" type="button" id="logoutButton">Log Out</button>
+                    <div class="simple-note">
+                        <h3>Group 1 Project</h3>
+                        <p>
+                            This webpage was created for <strong>ICT 2102: Web Development</strong> to demonstrate HTML fundamentals such as document structure, elements, tags, attributes, headings, paragraphs, lists, formatting, comments and semantic HTML.
+                        </p>
+                        <p>
+                            <em>Built by ICT 2102 Group 1.</em>
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- HTML COMMENT 2: Footer contains institution name and simple contact information -->
+    <!-- The footer contains the institution name and contact statement. -->
     <footer>
         <div class="container footer-grid">
-            <div>
-                <div class="footer-brand">Kaliro Education Centre</div>
-                <div class="footer-note">ICT 2102 • Group 1 • Education Web Assignment</div>
+            <p><strong>Kaliro Bright Future College</strong> • ICT 2102 Group 1</p>
+            <div class="footer-links">
+                <a href="#home">Back to Top</a>
+                <a href="#contact">Contact Us</a>
             </div>
-            <div class="footer-note">Contact: group1@example.com • Kaliro, Uganda</div>
         </div>
     </footer>
 
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
-
     <script>
-        // ICT 2102 Group 1: simple interactions for the static GitHub Pages website.
-        const menuToggle = document.getElementById('menuToggle');
-        const mainNav = document.getElementById('mainNav');
-        const backToTop = document.getElementById('backToTop');
-        const loginForm = document.getElementById('loginForm');
-        const loginMessage = document.getElementById('loginMessage');
-        const portalBox = document.getElementById('portalBox');
-        const logoutButton = document.getElementById('logoutButton');
-        const contactForm = document.getElementById('contactForm');
-        const contactMessage = document.getElementById('contactMessage');
-
-        menuToggle.addEventListener('click', () => {
-            mainNav.classList.toggle('open');
-            menuToggle.textContent = mainNav.classList.contains('open') ? '✕' : '☰';
-        });
-
-        document.querySelectorAll('#mainNav a').forEach(link => {
-            link.addEventListener('click', () => {
-                mainNav.classList.remove('open');
-                menuToggle.textContent = '☰';
-            });
-        });
-
-        window.addEventListener('scroll', () => {
-            backToTop.classList.toggle('show', window.scrollY > 500);
-        });
-
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        contactForm.addEventListener('submit', event => {
-            event.preventDefault();
-            contactMessage.textContent = 'Thank you! Your demo message has been received on this page.';
-            contactMessage.style.color = 'var(--success)';
-            contactForm.reset();
-        });
-
-        function showLoggedInState() {
-            portalBox.classList.add('visible');
+        // Simple JavaScript only for the mobile navigation menu.
+        function toggleMenu() {
+            const menu = document.getElementById('site-menu');
+            const button = document.querySelector('.menu-button');
+            const isOpen = menu.classList.toggle('show');
+            button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
         }
 
-        if (localStorage.getItem('group1LoggedIn') === 'true') {
-            showLoggedInState();
+        function closeMenu() {
+            const menu = document.getElementById('site-menu');
+            const button = document.querySelector('.menu-button');
+            menu.classList.remove('show');
+            button.setAttribute('aria-expanded', 'false');
         }
-
-        loginForm.addEventListener('submit', event => {
-            event.preventDefault();
-            const email = document.getElementById('loginEmail').value.trim();
-            const password = document.getElementById('loginPassword').value;
-
-            if (email === 'student@group1.edu' && password === 'ICT2102') {
-                localStorage.setItem('group1LoggedIn', 'true');
-                loginMessage.textContent = 'Login successful!';
-                loginMessage.style.color = 'var(--success)';
-                showLoggedInState();
-            } else {
-                loginMessage.textContent = 'Demo login not accepted. Use the credentials shown below the form.';
-                loginMessage.style.color = '#a33a2b';
-            }
-        });
-
-        logoutButton.addEventListener('click', () => {
-            localStorage.removeItem('group1LoggedIn');
-            portalBox.classList.remove('visible');
-            loginMessage.textContent = 'You have been logged out.';
-            loginMessage.style.color = 'var(--primary)';
-            loginForm.reset();
-        });
     </script>
 </body>
 </html>
