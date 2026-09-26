@@ -1,15 +1,30 @@
-# ICT 2102 – Group 1 Educational Web Platform
+# ICT 2102 Group 1 - Education Website
 
-This repository hosts a clean, responsive, and lightweight educational platform designed for **ICT 2102 Group 1**.
+This repository contains the Week 2 HTML Fundamentals assignment for Group 1.
 
-## 🌐 Live Website
-Access the deployed site on GitHub Pages:
-https://kisomapatrice.github.io/ICT-2102-Group1-Education/
+## Main file
+- `index.html` - complete website with HTML, CSS and JavaScript in one file.
 
-## 📁 Project Architecture
-- `index.html`: Semantic HTML5 layout structure
-- `style.css`: Clean responsive CSS layout (Flexbox & Grid)
-- `script.js`: Interactive navigation, search filter, and form handling
-- `README.md`: Project documentation and details
+## Features
+- Semantic HTML using `header`, `main`, `section`, `nav`, `article` and `footer`
+- More than three headings and paragraphs
+- Unordered programme list
+- Ordered joining process
+- `<strong>` and `<em>` formatting
+- Two HTML comments
+- Responsive navigation
+- Buttons and internal navigation
+- Relevant education images
+- Demo student login using JavaScript/localStorage
+- Demo contact form interaction
 
+## Demo login
+Email: `student@group1.edu`
+Password: `ICT2102`
+
+## Important note
+GitHub Pages is a static hosting service. The login in this assignment is a front-end demonstration only. It is not a secure server-side authentication system.
+
+## Assignment alignment
+The site is structured around the ICT 2102 Week 2 Group 1 Education requirements: institution heading, Welcome, About Us, Our Programmes, How to Join, Why Choose Us and a footer with contact information.
 
