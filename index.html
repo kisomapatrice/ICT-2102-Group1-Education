@@ -2,67 +2,247 @@
 <html lang=”en”>
 <head>
     <meta charset=”UTF-8”>
-    <title>Apex Institute of Technology – Web Development</title>
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
+    <title>ICT-2102 | Group 1 Educational Hub</title>
+    
+    <!—Google Fonts & Font Awesome Icons 
+    <link rel=”preconnect” href=https://fonts.googleapis.com>
+    <link rel=”preconnect” href=https://fonts.gstatic.com crossorigin>
+    <link href=https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap rel=”stylesheet”>
+    <link rel=”stylesheet” href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css>
+    
+    <!—Custom CSS 
+    <link rel=”stylesheet” href=”style.css”>
 </head>
 <body>
 
-    <!—Header Section 
-    <header>
-        <h1>Apex Institute of Technology</h1>
+    <!—Header & Navigation 
+    <header class=”navbar”>
+        <div class=”container nav-container”>
+            <a href=”#” class=”logo”>
+                <i class=”fa-solid fa-graduation-cap”></i> EduGroup<span>1</span>
+            </a>
+            <nav class=”nav-links” id=”navLinks”>
+                <a href=”#home” class=”active”>Home</a>
+                <a href=”#about”>About</a>
+                <a href=”#modules”>Modules</a>
+                <a href=”#team”>Team</a>
+                <a href=”#faq”>FAQ</a>
+                <a href=”#contact” class=”btn btn-primary”>Get in Touch</a>
+            </nav>
+            <div class=”hamburger” id=”hamburger”>
+                <i class=”fa-solid fa-bars”></i>
+            </div>
+        </div>
     </header>
 
-    <!—Main Content Area 
-    <main>
-        
-        <!—Welcome Section 
-        <section>
-            <h2>Welcome</h2>
-            <p>Welcome to Apex Institute of Technology, where we empower students with practical web development and technology skills for the modern industry.</p>
-        </section>
+    <!—Hero Section 
+    <section id=”home” class=”hero”>
+        <div class=”container hero-content”>
+            <span class=”badge”>ICT 2102 – Educational Technology</span>
+            <h1>Empowering Future Generations Through Digital Education</h1>
+            <p>Welcome to Group 1’s collaborative educational platform. We combine technology, innovative pedagogical frameworks, and modern web tools to foster accessible learning experiences.</p>
+            <div class=”hero-btns”>
+                <a href=”#modules” class=”btn btn-primary”>Explore Learning Modules</a>
+                <a href=”#about” class=”btn btn-secondary”>Learn More</a>
+            </div>
+        </div>
+    </section>
 
-        <!—About Us Section 
-        <section>
-            <h2>About Us</h2>
-            <p>Apex Institute of Technology was established to deliver top-tier hands-on technical education to aspiring software developers and digital creators.</p>
-            <p>Our mission focuses on collaborative learning, real-world project work, and fostering leadership in technology.</p>
-        </section>
+    <!—Key Metrics / Stats Section 
+    <section class=”stats”>
+        <div class=”container stats-grid”>
+            <div class=”stat-card”>
+                <h3>4+</h3>
+                <p>Core Modules</p>
+            </div>
+            <div class=”stat-card”>
+                <h3>100%</h3>
+                <p>Digital Integration</p>
+            </div>
+            <div class=”stat-card”>
+                <h3>24/7</h3>
+                <p>Resource Access</p>
+            </div>
+            <div class=”stat-card”>
+                <h3>Group 1</h3>
+                <p>ICT Project Team</p>
+            </div>
+        </div>
+    </section>
 
-        <!—Our Programmes Section 
-        <section>
-            <h2>Our Programmes</h2>
-            <ul>
-                <li>Web Development Essentials</li>
-                <li>Software Engineering Fundamentals</li>
-                <li>Data Science & Analytics</li>
-                <li>Cybersecurity Fundamentals</li>
-                <li>Database Administration</li>
-            </ul>
-        </section>
+    <!—About Section 
+    <section id=”about” class=”about”>
+        <div class=”container”>
+            <div class=”section-title”>
+                <h2>About Our Project</h2>
+                <p>Transforming standard curriculum into interactive, digitally accessible resources.</p>
+            </div>
+            <div class=”about-grid”>
+                <div class=”about-card”>
+                    <div class=”icon”><i class=”fa-solid fa-laptop-code”></i></div>
+                    <h3>Digital Literacy</h3>
+                    <p>Building core technological skills necessary for modern academic and professional environments.</p>
+                </div>
+                <div class=”about-card”>
+                    <div class=”icon”><i class=”fa-solid fa-users”></i></div>
+                    <h3>Collaborative Learning</h3>
+                    <p>Encouraging peer-to-peer knowledge sharing and team-based problem solving through open tools.</p>
+                </div>
+                <div class=”about-card”>
+                    <div class=”icon”><i class=”fa-solid fa-book-open”></i></div>
+                    <h3>Open Access</h3>
+                    <p>Providing well-structured educational materials reachable anytime, anywhere via cloud platforms.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!—How to Join Section 
-        <section>
-            <h2>How to Join</h2>
-            <ol>
-                <li>Submit an online application through our admissions portal.</li>
-                <li>Provide your academic credentials and required documents.</li>
-                <li>Attend a brief orientation session and entry evaluation.</li>
-                <li>Complete your course registration and receive your study timetable.</li>
-            </ol>
-        </section>
+    <!—Learning Modules / Resource Library 
+    <section id=”modules” class=”modules”>
+        <div class=”container”>
+            <div class=”section-title”>
+                <h2>Educational Modules</h2>
+                <p>Search or filter through our available course materials.</p>
+            </div>
 
-        <!—Why Choose Us Section 
-        <section>
-            <h2>Why Choose Us</h2>
-            <p>We deliver <strong>industry-aligned practical education</strong> supported by <em>experienced software engineering instructors</em>, ensuring every student acquires <strong>real-world practical skills</strong> and receives <em>personalized academic support</em> throughout their journey.</p>
-        </section>
+            <!—Search Bar 
+            <div class=”search-box”>
+                <i class=”fa-solid fa-magnifying-glass”></i>
+                <input type=”text” id=”moduleSearch” placeholder=”Search for topics, e.g., ‘Web’, ‘Git’, ‘Data’...”>
+            </div>
 
-    </main>
+            <div class=”modules-grid” id=”modulesGrid”>
+                <div class=”module-card” data-category=”web”>
+                    <span class=”category-tag”>Web Dev</span>
+                    <h3>HTML5 & Semantic Web</h3>
+                    <p>Learn structural markup, modern HTML tags, accessibility standards, and document organization.</p>
+                    <a href=”#” class=”card-link”>View Notes <i class=”fa-solid fa-arrow-right”></i></a>
+                </div>
+                <div class=”module-card” data-category=”tools”>
+                    <span class=”category-tag”>Git & Cloud</span>
+                    <h3>Version Control with Git</h3>
+                    <p>Master commit histories, branching, remote repositories on GitHub, and deployment strategies.</p>
+                    <a href=”#” class=”card-link”>View Notes <i class=”fa-solid fa-arrow-right”></i></a>
+                </div>
+                <div class=”module-card” data-category=”ict”>
+                    <span class=”category-tag”>ICT Skills</span>
+                    <h3>Information Systems</h3>
+                    <p>Understanding database architecture, networking fundamentals, and computer hardware essentials.</p>
+                    <a href=”#” class=”card-link”>View Notes <i class=”fa-solid fa-arrow-right”></i></a>
+                </div>
+                <div class=”module-card” data-category=”web”>
+                    <span class=”category-tag”>CSS Design</span>
+                    <h3>Responsive UI/UX Styling</h3>
+                    <p>Discover CSS Flexbox, Grid, CSS Variables, and responsive design for mobile & desktop devices.</p>
+                    <a href=”#” class=”card-link”>View Notes <i class=”fa-solid fa-arrow-right”></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!—Footer Section 
+    <!—Team Section 
+    <section id=”team” class=”team”>
+        <div class=”container”>
+            <div class=”section-title”>
+                <h2>Meet Group 1</h2>
+                <p>The dedicated student team behind this course project.</p>
+            </div>
+            <div class=”team-grid”>
+                <div class=”team-card”>
+                    <div class=”avatar”><i class=”fa-solid fa-user-astronaut”></i></div>
+                    <h3>Patrice Kisoma</h3>
+                    <p class=”role”>Team Lead & Developer</p>
+                    <p class=”desc”>Lead architect responsible for repository management, GitHub deployment, and core layout.</p>
+                </div>
+                <div class=”team-card”>
+                    <div class=”avatar”><i class=”fa-solid fa-user-ninja”></i></div>
+                    <h3>Group Collaborator</h3>
+                    <p class=”role”>Content & Research Specialist</p>
+                    <p class=”desc”>Responsible for content development, testing user interfaces, and module documentation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!—FAQ Section 
+    <section id=”faq” class=”faq”>
+        <div class=”container”>
+            <div class=”section-title”>
+                <h2>Frequently Asked Questions</h2>
+                <p>Find quick answers about our Group 1 Education Project.</p>
+            </div>
+            <div class=”faq-container”>
+                <div class=”faq-item”>
+                    <div class=”faq-question”>
+                        <span>What is the goal of this website?</span>
+                        <i class=”fa-solid fa-chevron-down”></i>
+                    </div>
+                    <div class=”faq-answer”>
+                        <p>This project fulfills the ICT 2102 requirement by demonstrating competence in local version control (Git), remote hosting (GitHub), and live deployment (GitHub Pages).</p>
+                    </div>
+                </div>
+                <div class=”faq-item”>
+                    <div class=”faq-question”>
+                        <span>How can teammates contribute?</span>
+                        <i class=”fa-solid fa-chevron-down”></i>
+                    </div>
+                    <div class=”faq-answer”>
+                        <p>Teammates added as GitHub collaborators can clone the repository, make edits locally in VS Code, commit, and push updates directly to the main branch.</p>
+                    </div>
+                </div>
+                <div class=”faq-item”>
+                    <div class=”faq-question”>
+                        <span>Is this website responsive?</span>
+                        <i class=”fa-solid fa-chevron-down”></i>
+                    </div>
+                    <div class=”faq-answer”>
+                        <p>Yes, the layout uses modern CSS Grid, Flexbox, and media queries to automatically adjust to smartphones, tablets, and desktop computers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!—Contact Form Section 
+    <section id=”contact” class=”contact”>
+        <div class=”container”>
+            <div class=”section-title”>
+                <h2>Get in Touch</h2>
+                <p>Have questions or feedback for Group 1? Send us a message.</p>
+            </div>
+            <form id=”contactForm” class=”contact-form”>
+                <div class=”form-group”>
+                    <label for=”name”>Full Name</label>
+                    <input type=”text” id=”name” required placeholder=”Enter your full name”>
+                </div>
+                <div class=”form-group”>
+                    <label for=”email”>Email Address</label>
+                    <input type=”email” id=”email” required placeholder=”Enter your email address”>
+                </div>
+                <div class=”form-group”>
+                    <label for=”message”>Message</label>
+                    <textarea id=”message” rows=”5” required placeholder=”Type your message here...”></textarea>
+                </div>
+                <button type=”submit” class=”btn btn-primary btn-block”>Send Message</button>
+                <div id=”formStatus” class=”form-status”></div>
+            </form>
+        </div>
+    </section>
+
+    <!—Footer 
     <footer>
-        <p>Apex Institute of Technology | Contact Us: info@apexinstitute.edu | Phone: +256 700 000 000</p>
+        <div class=”container footer-content”>
+            <p>&copy; 2026 ICT-2102 Group 1. Built with HTML5, CSS3, & JavaScript.</p>
+            <div class=”footer-links”>
+                <a href=https://github.com/kisomapatrice/ICT-2102-Group1-Education target=”_blank”><i class=”fa-brands fa-github”></i> GitHub Repo</a>
+            </div>
+        </div>
     </footer>
 
+    <!—Custom JavaScript 
+    <script src=”script.js”></script>
 </body>
 </html>
+
 
