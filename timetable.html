@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17352e">
+  <meta name="description" content="Plan a balanced study week with a filterable timetable and a practical weekly checklist.">
+  <title>Timetable | Group 1 Education</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body id="top" data-page="timetable">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header">
+  <div class="header-inner container">
+    <a class="brand" href="index.html" aria-label="Group 1 Education home">
+      <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span class="brand-copy"><strong>Group 1 <span>Education</span></strong><small>Learn with direction</small></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation"><span class="menu-icon" aria-hidden="true"></span><span class="menu-label">Menu</span></button>
+    <nav class="primary-navigation" id="primary-navigation" aria-label="Main navigation"><a class="nav-link" href="index.html">Home</a><a class="nav-link" href="about.html">About</a><a class="nav-link" href="programmes.html">Programmes</a><a class="nav-link" href="timetable.html" aria-current="page">Timetable</a><a class="nav-link" href="gallery.html">Gallery</a><a class="nav-link" href="admissions.html">Admissions</a>
+      <a class="nav-link nav-link-quiet" href="contact.html">Contact</a>
+      <a class="nav-link nav-link-quiet" href="feedback.html">Feedback</a>
+      <a class="nav-cta" href="student-registration.html">Registration <span aria-hidden="true">↗</span></a>
+    </nav>
+  </div>
+</header>
+<main id="main-content">
+<section class="page-hero container">
+  <div class="page-hero-copy"><p class="eyebrow"><span class="eyebrow-dot"></span>STUDY PLANNING</p><h1>Make time for what <span class="headline-accent">moves you forward.</span></h1><p class="lead">Plan focused study, practical sessions, group work, and review time across a balanced week.</p><div class="breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span>Timetable</span></div></div>
+</section>
+<section class="section container section-spacious"><div class="section-heading"><div><p class="eyebrow">A WEEK AT A GLANCE</p><h2>Build a rhythm that <span class="serif-accent">works for you.</span></h2></div><div class="schedule-filter"><label for="day-filter">Show a day</label><select id="day-filter"><option value="all">All days</option><option value="monday">Monday</option><option value="tuesday">Tuesday</option><option value="wednesday">Wednesday</option><option value="thursday">Thursday</option><option value="friday">Friday</option></select></div></div>
+<div class="schedule-summary" id="schedule-summary" aria-live="polite">Showing all 11 weekly study sessions.</div>
+<div class="schedule-table-wrap"><table class="schedule-table"><thead><tr><th scope="col">Day</th><th scope="col">Time</th><th scope="col">Learning session</th><th scope="col">Location</th></tr></thead><tbody id="schedule-table-body"><tr data-schedule-row data-day="monday"><td data-label="Day"><span class="day-pill">Monday</span></td><td data-label="Time">08:30–09:30</td><td data-label="Learning session"><strong>Mathematics practice</strong></td><td data-label="Location">Room A</td></tr><tr data-schedule-row data-day="monday"><td data-label="Day"><span class="day-pill">Monday</span></td><td data-label="Time">10:00–11:00</td><td data-label="Learning session"><strong>ICT / Web Development</strong></td><td data-label="Location">Computer lab</td></tr><tr data-schedule-row data-day="monday"><td data-label="Day"><span class="day-pill">Monday</span></td><td data-label="Time">11:30–12:30</td><td data-label="Learning session"><strong>Reading and research</strong></td><td data-label="Location">Library</td></tr><tr data-schedule-row data-day="tuesday"><td data-label="Day"><span class="day-pill">Tuesday</span></td><td data-label="Time">08:30–09:30</td><td data-label="Learning session"><strong>Science concepts</strong></td><td data-label="Location">Room B</td></tr><tr data-schedule-row data-day="tuesday"><td data-label="Day"><span class="day-pill">Tuesday</span></td><td data-label="Time">10:00–11:00</td><td data-label="Learning session"><strong>Group project work</strong></td><td data-label="Location">Study area</td></tr><tr data-schedule-row data-day="wednesday"><td data-label="Day"><span class="day-pill">Wednesday</span></td><td data-label="Time">09:00–10:00</td><td data-label="Learning session"><strong>Language and communication</strong></td><td data-label="Location">Room A</td></tr><tr data-schedule-row data-day="wednesday"><td data-label="Day"><span class="day-pill">Wednesday</span></td><td data-label="Time">10:30–11:30</td><td data-label="Learning session"><strong>Digital research skills</strong></td><td data-label="Location">Computer lab</td></tr><tr data-schedule-row data-day="thursday"><td data-label="Day"><span class="day-pill">Thursday</span></td><td data-label="Time">08:30–09:30</td><td data-label="Learning session"><strong>Problem-solving workshop</strong></td><td data-label="Location">Room B</td></tr><tr data-schedule-row data-day="thursday"><td data-label="Day"><span class="day-pill">Thursday</span></td><td data-label="Time">10:00–11:00</td><td data-label="Learning session"><strong>Assignment planning</strong></td><td data-label="Location">Study area</td></tr><tr data-schedule-row data-day="friday"><td data-label="Day"><span class="day-pill">Friday</span></td><td data-label="Time">09:00–10:00</td><td data-label="Learning session"><strong>Weekly review</strong></td><td data-label="Location">Library</td></tr><tr data-schedule-row data-day="friday"><td data-label="Day"><span class="day-pill">Friday</span></td><td data-label="Time">10:30–11:30</td><td data-label="Learning session"><strong>Team presentation practice</strong></td><td data-label="Location">Room A</td></tr></tbody></table></div>
+<div id="no-schedule" class="empty-state" hidden><strong>No sessions for this day</strong><p>Choose another day or return to the full week.</p></div>
+<div class="note-box note-box-warm"><span class="note-icon" aria-hidden="true">!</span><p><strong>Planning note:</strong> Use this weekly plan as a starting point, then adjust it to the timetable issued by your lecturer or institution.</p></div></section>
+<section class="section section-tint"><div class="container split-section"><div><p class="eyebrow">A SMALL WEEKLY HABIT</p><h2>Review. Adjust.<br><span class="serif-accent">Try again.</span></h2><p class="body-large">A timetable is a guide. Keep space for meals, rest, travel, and unexpected tasks.</p></div><div class="checklist-panel"><h3>Before your week begins</h3><label class="check-item"><input type="checkbox"><span>Write down deadlines and class times.</span></label><label class="check-item"><input type="checkbox"><span>Break one large task into smaller steps.</span></label><label class="check-item"><input type="checkbox"><span>Reserve short review sessions.</span></label><label class="check-item"><input type="checkbox"><span>Leave room for rest and changes.</span></label><p class="small-note">Use the checklist as you prepare your week. Your selections stay in this browser session.</p></div></div></section>
+</main>
+<footer class="site-footer">
+  <div class="container footer-main">
+    <div class="footer-brand-block"><a class="brand brand-footer" href="index.html"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span class="brand-copy"><strong>Group 1 <span>Education</span></strong><small>Curiosity into capability.</small></span></a><p>Learning pathways, study-planning tools, and educational resources to help learners make confident progress.</p></div>
+    <div><h2 class="footer-title">Explore</h2><a href="programmes.html">Learning areas</a><a href="timetable.html">Study timetable</a><a href="admissions.html">Admissions guide</a><a href="contact.html">Useful resources</a></div>
+    <div><h2 class="footer-title">Get involved</h2><a href="student-registration.html">Open registration form</a><a href="feedback.html">Share feedback</a><a href="about.html">Meet Group 1</a><a href="https://github.com/kisomapatrice/ICT-2102-Group1-Education" target="_blank" rel="noopener noreferrer">Group GitHub repository ↗</a></div>
+  </div>
+  <div class="container footer-bottom"><span>© <span data-current-year>2026</span> Group 1 Education · ICT 2102</span><span>Designed for clear learning on every screen.</span></div>
+</footer>
+<a class="back-to-top" href="#top" aria-label="Back to top">↑</a>
+</body>
+</html>
