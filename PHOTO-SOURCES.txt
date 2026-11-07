@@ -1,0 +1,30 @@
+BRIGHT FUTURE SECONDARY SCHOOL — PHOTO SOURCES
+===============================================
+
+The website currently displays real Bright Future Secondary School, Kaliro photographs
+from the WordPress Campus Connect coverage of the school visit on 16 July 2026.
+
+Original photo story:
+https://events.wordpress.org/campusconnect/2026/central-eastern-ug/wordpress-campus-connect-lights-up-kaliro-discovering-talent-at-bright-future-secondary-school/
+
+The photos are currently loaded from their original WordPress-hosted image URLs. This
+keeps the package smaller, but the website needs an internet connection to display them.
+Before official handover/public launch, obtain permission from the school and the
+photographer/publisher to republish identifiable learners, especially minors, on the
+school website. If approved, download approved originals into this folder and update
+the image URLs in the HTML to local assets/images/ filenames.
+
+PHOTO SET USED IN THE SITE
+- Bright-Future-1-1024x768.webp — learners at the school entrance
+- Bright-Future-2-1024x768.webp — learners and teachers at the campus
+- Bright-Future-3-1024x768.webp — classroom learners
+- Bright-Future-4-1024x768.webp — presenter and learners
+- Bright-Future-5-1024x768.webp — school/event identity banner
+- Bright-Future-6-1024x768.webp — classroom session
+- Bright-Future-7-1024x768.webp — workshop session
+- Bright-Future-8-1024x768.webp — presentation session
+- Bright-Future-SS-1024x576.webp — school learning session
+- Bright-Future-SS-Certificate-1024x768.webp — certificate presentation
+- Mr.-Headteacher-1024x682.jpeg — headteacher at the programme
+- Birght-Fure-WordPress-hands-on-1024x682.jpeg — practical laptop activity
+- WordPress-at-bright-Future-1024x682.jpeg — classroom technology session
